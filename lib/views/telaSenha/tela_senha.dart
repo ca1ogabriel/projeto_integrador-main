@@ -29,7 +29,7 @@ class _RedefinirSenhaState extends State<RedefinirSenha> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const SizedBox(height: 105),
+          const SizedBox(height: 75),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -66,7 +66,7 @@ class _RedefinirSenhaState extends State<RedefinirSenha> {
             child: TextFormField(
               decoration: getInputDecoration(
                 textlabel: 'Digite sua nova senha',
-                icon: Icon.key_rounded,
+                icon: Icons.key_rounded
               ),
             )
           ),
@@ -76,7 +76,7 @@ class _RedefinirSenhaState extends State<RedefinirSenha> {
             child: TextFormField(
               decoration: getInputDecoration(
                 textlabel: 'Confirme sua nova senha',
-                icon: Icon.key_rounded,
+                icon: Icons.key_rounded,
               ),
               obscureText: true,
             ),
