@@ -182,7 +182,7 @@ class _TelaLoginState extends State<TelaLogin> {
             'Redefinir Senha',
             style: TextStyle(
               fontSize: 15.0,
-              color: Colors.blue
+              color: Colors.black
             ),
           ),
         ),
