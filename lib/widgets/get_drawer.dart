@@ -196,9 +196,11 @@ Widget getDrawer(BuildContext context) {
                 size: 30,
               ),
             ),
-            const ListTile(
-              onTap: null,
-              title: Text(
+            ListTile(
+              onTap: () {
+                Navigator.pushNamed(context, '/ScreenEntrada');
+              },
+              title: const Text(
                 'Sair',
                 style: TextStyle(
                     fontFamily: 'Kadwa',
@@ -206,7 +208,7 @@ Widget getDrawer(BuildContext context) {
                     fontWeight: FontWeight.bold,
                     color: kColorTextTertiary),
               ),
-              leading: Icon(
+              leading: const Icon(
                 Icons.logout_outlined,
                 color: Colors.white,
                 size: 30,

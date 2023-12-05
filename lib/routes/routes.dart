@@ -33,7 +33,8 @@ class Routes extends StatelessWidget {
         '/ScreenFormaPagamento': (context) => const AddFormaPagamento(),
         '/ScreenEndereco': (context) => const TelaEndereco(),
         '/ScreenFormAddEndereco': (context) => const FormeAddEndereco(),
-        '/ScreenRedefinirSenha': (context) => const RedefinirSenha()
+        '/ScreenRedefinirSenha': (context) => const RedefinirSenha(),
+        '/ScreenEntrada': (context) => const TelaEntrada()
       },
     );
   }
