@@ -173,20 +173,29 @@ class _TelaLoginState extends State<TelaLogin> {
               },
             ),
           ),
-          SizedBox(
-            height: 55,
-            child: GestureDetector(
-          onTap: () { Navigator.pushNamed(context, '/ScreenRedefinirSenha');
-          },
-          child: const Text(
-            'Redefinir Senha',
+          Row(
+            children: [
+              const Padding(
+                padding: EdgeInsets.only(left: 50, top: 60)),
+              SizedBox(
+              height: 53,
+              child: GestureDetector(
+                onTap: () { Navigator.pushNamed(context, '/ScreenRedefinirSenha');
+                },
+                child: const Text(
+                  'Redefinir Senha',
+                  textAlign: TextAlign.left,
             style: TextStyle(
-              fontSize: 15.0,
-              color: Colors.black
+              fontSize: 14.0,
+              color: Colors.blue,
+              fontFamily: 'Kadwa',
+              fontWeight: FontWeight.normal
             ),
           ),
         ),
-          ),
+      ),    
+    ],
+  ),
           ElevatedButton(
             onPressed: () {
               loginPage();
