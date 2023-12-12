@@ -110,6 +110,7 @@ class _TelaCadastroState extends State<TelaCadastro> {
             height: 27,
           ),
           SizedBox(
+            height: 55,
             width: 352,
             child: TextFormField(
               controller: _passwordController,
@@ -142,6 +143,7 @@ class _TelaCadastroState extends State<TelaCadastro> {
             height: 27,
           ),
           SizedBox(
+            height: 55,
             width: 352,
             child: TextFormField(
               obscureText: obscureTextConfirm,
