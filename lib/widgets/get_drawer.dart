@@ -59,7 +59,7 @@ Widget getDrawer(BuildContext context) {
                             Icon(
                               Icons.edit_note_rounded,
                               color: kColorTextTertiary,
-                              size: 25,
+                              size: 24,
                             )
                           ],
                         )
