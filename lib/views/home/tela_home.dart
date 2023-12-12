@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projeto_integrador/theme/colors.dart';
+import 'package:projeto_integrador/theme/get_style_card_product.dart';
 import 'package:projeto_integrador/theme/get_style_seach.dart';
 import 'package:projeto_integrador/widgets/get_drawer.dart';
 
@@ -35,14 +36,14 @@ class _TelaHomeState extends State<TelaHome> {
       title: Row(
         children: [
           SizedBox(
-            width: 240,
+            width: 250,
             height: 41,
             child: TextFormField(
               decoration: getStyleSeach,
             ),
           ),
           const SizedBox(
-            width: 12,
+            width: 20,
           ),
           IconButton(
             onPressed: () {},
@@ -58,16 +59,80 @@ class _TelaHomeState extends State<TelaHome> {
   }
 
   Widget _getBodyHome() {
-    return const SafeArea(
-      child: SingleChildScrollView(
+    return SafeArea(
+        child: SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
             Row(
-              children: [],
-            )
+              children: [
+                RichText(
+                    text: const TextSpan(
+                        text: 'Explore os',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontFamily: 'Kadwa',
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        children: [
+                      TextSpan(
+                          text: ' produtos',
+                          style: TextStyle(
+                              color: kColorTextPrimary,
+                              fontFamily: 'Kadwa',
+                              fontSize: 20))
+                    ]))
+              ],
+            ),
+            const SizedBox(
+              height: 250,
+            ),
+            const Row(
+              children: [
+                Text('Usados',
+                    style: TextStyle(
+                        fontFamily: 'Kadwa',
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black))
+              ],
+            ),
+            const SizedBox(
+              height: 250,
+            ),
+            const Row(
+              children: [
+                Text(
+                  'Visto recentemente',
+                  style: TextStyle(
+                      fontFamily: 'Kadwa',
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
+                )
+              ],
+            ),
+            const SizedBox(
+              height: 250,
+            ),
+            const Row(
+              children: [
+                Text(
+                  'Notebooks',
+                  style: TextStyle(
+                      fontFamily: 'Kadwa',
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
+                ),
+              ],
+            ),
+            const SizedBox(height: 250)
           ],
         ),
       ),
-    );
+    ));
   }
 }
