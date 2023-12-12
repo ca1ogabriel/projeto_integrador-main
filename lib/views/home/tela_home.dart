@@ -89,6 +89,24 @@ class _TelaHomeState extends State<TelaHome> {
             const SizedBox(
               height: 250,
             ),
+             Row(
+              children: [
+                SizedBox(
+                  child: Column(
+                    children: [
+                      Container(
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadiusDirectional.circular(10),
+
+                        ),
+                      )
+                    ]
+                  ),
+                 ),
+              ],
+            ),
             const Row(
               children: [
                 Text('Usados',
