@@ -78,7 +78,7 @@ class _TelaHomeState extends State<TelaHome> {
                         ),
                         children: [
                       TextSpan(
-                          text: ' produtos',
+                          text: 'produtos',
                           style: TextStyle(
                               color: kColorTextPrimary,
                               fontFamily: 'Kadwa',
@@ -87,11 +87,31 @@ class _TelaHomeState extends State<TelaHome> {
               ],
             ),
             const SizedBox(
-              height: 15,
-            ),
-            const SizedBox(
               child: Row(
                 children: [
+                  Column(
+                    children: [
+                      Card(
+                        elevation: 5,
+                        color: Colors.amber,
+                        child: Padding(
+                          padding: EdgeInsets.all(15.0),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              SizedBox(height: 8,),
+                              Text('Samsung \n 64GB 4GB RAM full HD',
+                              style: TextStyle(
+                                fontFamily: 'Kadwa',
+                                fontSize: 17,
+                                color: Colors.black
+                              ),),
+                            ],
+                          ),
+                          ),
+                      )
+                    ],
+                  ),
                   Column(
                     children: [
                       Card(
@@ -131,7 +151,32 @@ class _TelaHomeState extends State<TelaHome> {
               ],
             ),
             const SizedBox(
-              height: 250,
+              child: Row(
+                children: [
+                  Column(
+                    children: [
+                      Card(
+                        elevation: 5,
+                        color: Colors.amber,
+                        child: Padding(
+                          padding: EdgeInsets.all(15.0),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              SizedBox(height: 8,),
+                              Text('Samsung \n 64GB 4GB RAM full HD',
+                              style: TextStyle(
+                                fontFamily: 'Kadwa',
+                                fontSize: 17,
+                                color: Colors.black
+                              ),),
+                            ],
+                          ),
+                          ),
+                      )
+                    ],
+                  )
+                ],)
             ),
             const Row(
               children: [
@@ -146,7 +191,32 @@ class _TelaHomeState extends State<TelaHome> {
               ],
             ),
             const SizedBox(
-              height: 250,
+              child: Row(
+                children: [
+                  Column(
+                    children: [
+                      Card(
+                        elevation: 5,
+                        color: Colors.amber,
+                        child: Padding(
+                          padding: EdgeInsets.all(15.0),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              SizedBox(height: 8,),
+                              Text('Samsung \n 64GB 4GB RAM full HD',
+                              style: TextStyle(
+                                fontFamily: 'Kadwa',
+                                fontSize: 17,
+                                color: Colors.black
+                              ),),
+                            ],
+                          ),
+                          ),
+                      )
+                    ],
+                  )
+                ],)
             ),
             const Row(
               children: [
@@ -160,7 +230,34 @@ class _TelaHomeState extends State<TelaHome> {
                 ),
               ],
             ),
-            const SizedBox(height: 250)
+            const SizedBox(
+              child: Row(
+                children: [
+                  Column(
+                    children: [
+                      Card(
+                        elevation: 5,
+                        color: Colors.amber,
+                        child: Padding(
+                          padding: EdgeInsets.all(15.0),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              SizedBox(height: 8,),
+                              Text('Samsung \n 64GB 4GB RAM full HD',
+                              style: TextStyle(
+                                fontFamily: 'Kadwa',
+                                fontSize: 17,
+                                color: Colors.black
+                              ),),
+                            ],
+                          ),
+                          ),
+                      )
+                    ],
+                  )
+                ],)
+            ),
           ],
         ),
       ),
