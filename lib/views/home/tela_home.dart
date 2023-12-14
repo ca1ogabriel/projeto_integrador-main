@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projeto_integrador/theme/colors.dart';
-import 'package:projeto_integrador/theme/get_style_card_product.dart';
+//import 'package:projeto_integrador/theme/get_style_card_product.dart';
 import 'package:projeto_integrador/theme/get_style_seach.dart';
 import 'package:projeto_integrador/widgets/get_drawer.dart';
 
