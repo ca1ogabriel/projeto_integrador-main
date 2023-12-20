@@ -8,6 +8,7 @@ import 'package:projeto_integrador/theme/colors.dart';
 import 'package:projeto_integrador/theme/get_button_style.dart';
 import 'package:projeto_integrador/theme/get_input_decoration.dart';
 import 'package:projeto_integrador/theme/text_form_style.dart';
+import 'package:projeto_integrador/widgets/get_aler_dialog.dart';
 
 class GeraAnucio extends StatefulWidget {
   const GeraAnucio({super.key});
@@ -230,8 +231,8 @@ class _GeraAnucioState extends State<GeraAnucio> {
     );
   }
 
-  gererAnuncio() {
-    final produto = Produto(
+  gererAnuncio() async {
+    final Produto produto = Produto(
       nomeProduto: _nomeProdutoController.text,
       descricao: _descController.text,
       marcaProduto: _marcaController.text,
@@ -239,7 +240,16 @@ class _GeraAnucioState extends State<GeraAnucio> {
       preco: _precoController.text,
     );
 
-    _firestore.cadastarFirebase('produtor', produto.toMap());
+    await _firestore.cadastarFirebase('produtor', produto.toMap()).then(
+      (value) => showDialog(
+        context: context,
+        builder: (BuildContext build) => alertDialogAddEndereco(
+          title: 'Anuncio Cadastrado',
+          content: 'Anuncio Cadastrado com sucesso', 
+          textButton: 'OK',
+          context: context),
+          ),
+          );
   }
 
   Future selectImage() async {

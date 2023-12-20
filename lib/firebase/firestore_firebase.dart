@@ -13,3 +13,5 @@ class FirestoreFirebase {
     await db.collection(collection).doc(id).delete();
   }
 }
+// criar para cadastrar um produto
+
