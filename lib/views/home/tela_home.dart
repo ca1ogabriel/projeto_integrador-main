@@ -112,29 +112,6 @@ class _TelaHomeState extends State<TelaHome> {
                       )
                     ],
                   ),
-                  Column(
-                    children: [
-                      Card(
-                        elevation: 5,
-                        color: Colors.amber,
-                        child: Padding(
-                          padding: EdgeInsets.all(15.0),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              SizedBox(height: 8,),
-                              Text('Samsung \n 64GB 4GB RAM full HD',
-                              style: TextStyle(
-                                fontFamily: 'Kadwa',
-                                fontSize: 17,
-                                color: Colors.black
-                              ),),
-                            ],
-                          ),
-                          ),
-                      )
-                    ],
-                  )
                 ],)
             ),
             const SizedBox(

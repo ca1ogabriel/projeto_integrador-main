@@ -12,8 +12,7 @@ class TelaAnuncio extends StatefulWidget {
   State<TelaAnuncio> createState() => _TelaAnuncioState();
 }
 
-final CollectionReference collectionReference =
-    FirebaseFirestore.instance.collection('Produto');
+final CollectionReference collectionReference = FirebaseFirestore.instance.collection('Produto');
 final Stream<QuerySnapshot> snapshots = collectionReference.snapshots();
 
 class _TelaAnuncioState extends State<TelaAnuncio> {
@@ -24,7 +23,12 @@ class _TelaAnuncioState extends State<TelaAnuncio> {
       appBar: PreferredSize(
           preferredSize: const Size.fromHeight(95),
           child: getAppBarScreensSecundary(title: 'Anúncio')),
-      body: _getBody(),
+      body: Column(
+        children: [
+          _getBody(),
+          _getProducts()
+        ],
+      ),
       backgroundColor: kBackGroundColor,
     );
   }
@@ -74,6 +78,11 @@ class _TelaAnuncioState extends State<TelaAnuncio> {
             'Produtos Aúnciados:',
             style: TextStyle(
                 fontFamily: 'Kadwa', fontWeight: FontWeight.bold, fontSize: 20),
+          ),
+          Column(
+            children: [
+              _getProducts()
+            ],
           )
         ],
       ),
@@ -81,7 +90,7 @@ class _TelaAnuncioState extends State<TelaAnuncio> {
   }
 
   Widget _getProducts() {
-    return SafeArea(
+    return SizedBox(
       child: StreamBuilder(
         stream: snapshots,
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
@@ -103,8 +112,8 @@ class _TelaAnuncioState extends State<TelaAnuncio> {
                   documents[index].data() as Map<String, dynamic>;
                 return Container(
                   margin: const EdgeInsets.all(5),
-                  width: 353,
-                  height: 93,
+                  width: 100,
+                  height: 85,
                   child: Card(
                     child: Container(
                       decoration: BoxDecoration(
@@ -122,7 +131,7 @@ class _TelaAnuncioState extends State<TelaAnuncio> {
                               data['nomeProduto'],
                               style: const TextStyle(
                                 fontFamily: 'Kadwa',
-                                fontSize: 15,
+                                fontSize: 5,
                                 fontWeight: FontWeight.bold,
                                 color: kColorTextPrimary
                               ),
@@ -131,18 +140,36 @@ class _TelaAnuncioState extends State<TelaAnuncio> {
                               data['descricao'],
                               style: const TextStyle(
                                 fontFamily: 'Kadwa',
-                                fontSize: 11,
+                                fontSize: 5,
                                 fontWeight: FontWeight.w700,
                                 color: Colors.grey),
+                            ),
+                            Text(
+                              data['marcaProduto'],
+                              style: const TextStyle(
+                                fontFamily: 'Kadwa',
+                                fontSize: 5,
+                                fontWeight: FontWeight.bold,
+                                color: kColorTextPrimary),
+                            ),
+                            Text(
+                              data['defeito'],
+                              style: const TextStyle(
+                                fontFamily: 'Kadwa',
+                                fontSize: 5,
+                                fontWeight: FontWeight.bold,
+                                color: kColorTextPrimary
+                              ),
                             ),
                             Text(
                               data['preco'],
                               style: const TextStyle(
                                 fontFamily: 'Kadwa',
-                                fontSize: 20,
+                                fontSize: 5,
                                 fontWeight: FontWeight.bold,
-                                color: kColorTextPrimary),
-                            )
+                                color: kColorTextPrimary
+                              ),
+                            ),
                           ]
                         )
                       ),
